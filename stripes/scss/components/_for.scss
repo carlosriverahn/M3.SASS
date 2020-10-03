@@ -1,0 +1,20 @@
+@for $i from 0 to 5 {
+    .strips__strip:nth-child(#{$i + 1}) {
+        @if ($i == 0){left: $i * 20;}
+        @else{left: ($i * 20) + vw;}
+      }
+}
+
+
+
+@each $strip in $stripList {
+    @keyframes #{$strip} {
+        100% {
+          -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+        }
+      }
+}
+
+
+

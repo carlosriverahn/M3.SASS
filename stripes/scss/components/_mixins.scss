@@ -1,0 +1,16 @@
+@mixin strip_content ($color, $animation, $strip, $delay) {
+ .strip__content {
+        background:$color;
+        -webkit-transform: translate3d($animation);
+                transform: translate3d($animation);
+        -webkit-animation-name: $strip;
+                animation-name: $strip;
+        -webkit-animation-delay: $delay;
+                animation-delay: $delay;
+        }
+}
+.strips__strip:nth-child(1) {@include strip_content ( $azul, $entry1, $strip1, $seconds1);}
+.strips__strip:nth-child(2) {@include strip_content ( $celeste, $entry2, $strip2, $seconds2);}
+.strips__strip:nth-child(3) {@include strip_content ( $lila, $entry3, $strip3, $seconds3);}
+.strips__strip:nth-child(4) {@include strip_content ( $amarillo, $entry2, $strip4, $seconds4);}
+.strips__strip:nth-child(5) {@include strip_content ( $rojo, $entry4, $strip5, $seconds5);}
